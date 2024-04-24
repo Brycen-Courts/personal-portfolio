@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <style>
+            aside {
+              padding: 15px;
+              margin: 15px;
+              float: center;
+            }
+
+            article {
+                padding: 15px;
+                margin: 15px;
+                color: white;
+                font-size: 1.5rem;
+                font-family: "Poppins";
+            }
+        </style>
+        <title>Bryson's Life</title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">Bryson</a></div>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Personal.html">Personal</a></li>
+                    <li><a href="Work.html">Work</a></li>
+                    <li><a href="Extra.html">Extras</a></li>
+                </ul>
+                <a href="Contact.html" class="action_btn">Contact</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+                <div class="dropdown_menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Personal.html">Personal</a></li>
+                    <li><a href="Work.html">Work</a></li>
+                    <li><a href="Extra.html">Extras</a></li>
+                    <li><a href="Contact.html" class="action_btn">Contact</a></li>
+                </div>
+        </header>
+                <article>
+                <p>When it comes to work, unfortunately and at the same time,<br> fortunately I
+                    have only worked at one job for the last three years. <br>Within that time i've
+                    gained a lot of experience at Food Lion, where I work, but I have not been <br>able 
+                    to branch out to experience other jobs. I am good at what I do, which is stocking
+                    cleaning, <br>and ordering frozen / ice cream products. At the same time, i'm proud of the 
+                    fact I have been<br> able to keep the same job for the last three years.  
+                </p>
+                </article>
+                <aside>
+                    <img src="images/Resume.jpg" width="700" height="900" class="resumepic">
+                </aside>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick= function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classlist.contains('open')
+
+                toggleBtnIcon.classlist = isOpen
+                ? 'fa-solid fa-xmark '
+                : 'fa-solid fa-bars '
+            }
+        </script>
+    </body>
+</html>

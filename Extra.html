@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Bryson's Life</title>
+        <style>
+            section {
+                padding: 15px;
+                margin: 15px;
+                color: white;
+                font-size: 1.5rem;
+                font-family: "Poppins";
+            
+            }
+
+            img {
+                border-color: white;
+                border-width: 10px;
+                padding: 15px;
+                margin: 15px;
+                display: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">Bryson</a></div>
+                <ul class="links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Personal.html">Personal</a></li>
+                    <li><a href="Work.html">Work</a></li>
+                    <li><a href="Extra.html">Extras</a></li>
+                </ul>
+                <a href="Contact.html" class="action_btn">Contact</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+                <div class="dropdown_menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Personal.html">Personal</a></li>
+                    <li><a href="Work.html">Work</a></li>
+                    <li><a href="Extra.html">Extras</a></li>
+                    <li><a href="Contact.html" class="action_btn">Contact</a></li>
+                </div>
+        </header>
+            <section>
+                <h1></h1>
+                <p>This page is dedicated to extra facts about me to any future employeer or viewer of my page.</p>
+                <p>For starters, I am pretty good at dieting. From June of 2020 to April of 2021 I lost over 120 pounds. I 
+                 went from 323 pounds to 196. Unfortunately I did gain some of that weight back, but right now i'm back
+                on track to losing it all again.</p>
+                <p>
+                    Another extra fact about me is that I am a big conspiracy theorist. Even if half of it isnt real, I do enjoy looking 
+                    at theories. I especially like looking into ones on our own CIA website such as the kennedy assassination, ufos, etc..
+                </p>
+            </section>
+
+            <img src="images/ufo.jpg" height="500px" width="350px">
+            <img src="images/bigfoot.jpg" height="500px" width="350px">
+            <img src="images/scale.jpg" height="500px" width="650px">
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick= function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classlist.contains('open')
+
+                toggleBtnIcon.classlist = isOpen
+                ? 'fa-solid fa-xmark '
+                : 'fa-solid fa-bars '
+            }
+        </script>
+    </body>
+</html>
